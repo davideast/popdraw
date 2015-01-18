@@ -5,6 +5,10 @@
 //  Created by deast on 1/17/15.
 //  Copyright (c) 2015 Firebase. All rights reserved.
 //
+//  TODO: Sandbox each user to their own drawings. Loop through
+//        each user's coordinates and draw them on the page. Use
+//        a start point to set the path's starting point and then
+//        the rest of the coordinates for drawing.
 
 import UIKit
 
@@ -20,6 +24,7 @@ class RoomViewController: UIViewController {
     super.viewDidLoad()
     
     var roomRef = ref.childByAppendingPath(room.id)
+    var count = 0
     
     title = room.name
     
@@ -33,9 +38,18 @@ class RoomViewController: UIViewController {
     roomRef.observeEventType(.ChildAdded, withBlock: { snapshot in
       
       if let xPoint = snapshot.value["x"] as? CGFloat {
+        
         if let yPoint = snapshot.value["y"] as? CGFloat {
-          self.drawView.addPoint(CGPointMake(xPoint, yPoint))
+          
+          var point = CGPointMake(xPoint, yPoint)
+          if(count == 0) {
+            self.drawView.moveToFirstPoint(point)
+            count++
+          } else {
+            self.drawView.addPoint(point)
+          }
         }
+        
       }
     
     })
