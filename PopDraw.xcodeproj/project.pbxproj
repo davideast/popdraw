@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		067EF323A7CCD7D76C8E08D0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA10779BC46FEE2EB45CA7C /* libPods.a */; };
+		BB8D831A1A6B0FE700FD4781 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8D83191A6B0FE700FD4781 /* DrawView.swift */; };
+		BBE5860B1A6B03E400A98B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5860A1A6B03E400A98B34 /* AppDelegate.swift */; };
+		BBE586101A6B03E400A98B34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE5860E1A6B03E400A98B34 /* Main.storyboard */; };
+		BBE586121A6B03E400A98B34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE586111A6B03E400A98B34 /* Images.xcassets */; };
+		BBE586151A6B03E400A98B34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE586131A6B03E400A98B34 /* LaunchScreen.xib */; };
+		BBE586211A6B03E500A98B34 /* PopDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE586201A6B03E500A98B34 /* PopDrawTests.swift */; };
+		BBE5862C1A6B04CF00A98B34 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5862B1A6B04CF00A98B34 /* RoomTableViewController.swift */; };
+		BBE5862E1A6B0B1500A98B34 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5862D1A6B0B1500A98B34 /* RoomViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBE5861B1A6B03E400A98B34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBE585FD1A6B03E400A98B34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBE586041A6B03E400A98B34;
+			remoteInfo = PopDraw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90D6359D25EECF2073930A2E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B2D3BDD929C7917E6B21109E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BB298DBF1A6B1E1800D882B4 /* PopDraw-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopDraw-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB8D83191A6B0FE700FD4781 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawView.swift; path = Views/DrawView.swift; sourceTree = "<group>"; };
+		BBE586051A6B03E400A98B34 /* PopDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE586091A6B03E400A98B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE5860A1A6B03E400A98B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBE5860F1A6B03E400A98B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBE586111A6B03E400A98B34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BBE586141A6B03E400A98B34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BBE5861A1A6B03E400A98B34 /* PopDrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopDrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE5861F1A6B03E500A98B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE586201A6B03E500A98B34 /* PopDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopDrawTests.swift; sourceTree = "<group>"; };
+		BBE5862B1A6B04CF00A98B34 /* RoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomTableViewController.swift; path = ViewControllers/RoomTableViewController.swift; sourceTree = "<group>"; };
+		BBE5862D1A6B0B1500A98B34 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoomViewController.swift; path = ViewControllers/RoomViewController.swift; sourceTree = "<group>"; };
+		EAA10779BC46FEE2EB45CA7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBE586021A6B03E400A98B34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				067EF323A7CCD7D76C8E08D0 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBE586171A6B03E400A98B34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A7965BD671F4BDBBA08A75E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3BDD929C7917E6B21109E /* Pods.debug.xcconfig */,
+				90D6359D25EECF2073930A2E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB8D83181A6B0FCF00FD4781 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D83191A6B0FE700FD4781 /* DrawView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BBE585FC1A6B03E400A98B34 = {
+			isa = PBXGroup;
+			children = (
+				BBE586071A6B03E400A98B34 /* PopDraw */,
+				BBE5861D1A6B03E500A98B34 /* PopDrawTests */,
+				BBE586061A6B03E400A98B34 /* Products */,
+				8A7965BD671F4BDBBA08A75E /* Pods */,
+				FAB35DA4BAAFFA3C53FD43E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BBE586061A6B03E400A98B34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBE586051A6B03E400A98B34 /* PopDraw.app */,
+				BBE5861A1A6B03E400A98B34 /* PopDrawTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBE586071A6B03E400A98B34 /* PopDraw */ = {
+			isa = PBXGroup;
+			children = (
+				BB8D83181A6B0FCF00FD4781 /* Views */,
+				BBE5862A1A6B03EA00A98B34 /* ViewControllers */,
+				BBE5860A1A6B03E400A98B34 /* AppDelegate.swift */,
+				BBE5860E1A6B03E400A98B34 /* Main.storyboard */,
+				BBE586111A6B03E400A98B34 /* Images.xcassets */,
+				BBE586131A6B03E400A98B34 /* LaunchScreen.xib */,
+				BBE586081A6B03E400A98B34 /* Supporting Files */,
+				BB298DBF1A6B1E1800D882B4 /* PopDraw-Bridging-Header.h */,
+			);
+			path = PopDraw;
+			sourceTree = "<group>";
+		};
+		BBE586081A6B03E400A98B34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBE586091A6B03E400A98B34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBE5861D1A6B03E500A98B34 /* PopDrawTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBE586201A6B03E500A98B34 /* PopDrawTests.swift */,
+				BBE5861E1A6B03E500A98B34 /* Supporting Files */,
+			);
+			path = PopDrawTests;
+			sourceTree = "<group>";
+		};
+		BBE5861E1A6B03E500A98B34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBE5861F1A6B03E500A98B34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBE5862A1A6B03EA00A98B34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBE5862B1A6B04CF00A98B34 /* RoomTableViewController.swift */,
+				BBE5862D1A6B0B1500A98B34 /* RoomViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FAB35DA4BAAFFA3C53FD43E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAA10779BC46FEE2EB45CA7C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBE586041A6B03E400A98B34 /* PopDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBE586241A6B03E500A98B34 /* Build configuration list for PBXNativeTarget "PopDraw" */;
+			buildPhases = (
+				5F06F4AE46E7BF987BE2D928 /* Check Pods Manifest.lock */,
+				BBE586011A6B03E400A98B34 /* Sources */,
+				BBE586021A6B03E400A98B34 /* Frameworks */,
+				BBE586031A6B03E400A98B34 /* Resources */,
+				55FA5E444CDDE548991BF9BD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopDraw;
+			productName = PopDraw;
+			productReference = BBE586051A6B03E400A98B34 /* PopDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBE586191A6B03E400A98B34 /* PopDrawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBE586271A6B03E500A98B34 /* Build configuration list for PBXNativeTarget "PopDrawTests" */;
+			buildPhases = (
+				BBE586161A6B03E400A98B34 /* Sources */,
+				BBE586171A6B03E400A98B34 /* Frameworks */,
+				BBE586181A6B03E400A98B34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBE5861C1A6B03E400A98B34 /* PBXTargetDependency */,
+			);
+			name = PopDrawTests;
+			productName = PopDrawTests;
+			productReference = BBE5861A1A6B03E400A98B34 /* PopDrawTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBE585FD1A6B03E400A98B34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Firebase;
+				TargetAttributes = {
+					BBE586041A6B03E400A98B34 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BBE586191A6B03E400A98B34 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BBE586041A6B03E400A98B34;
+					};
+				};
+			};
+			buildConfigurationList = BBE586001A6B03E400A98B34 /* Build configuration list for PBXProject "PopDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBE585FC1A6B03E400A98B34;
+			productRefGroup = BBE586061A6B03E400A98B34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBE586041A6B03E400A98B34 /* PopDraw */,
+				BBE586191A6B03E400A98B34 /* PopDrawTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBE586031A6B03E400A98B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBE586101A6B03E400A98B34 /* Main.storyboard in Resources */,
+				BBE586151A6B03E400A98B34 /* LaunchScreen.xib in Resources */,
+				BBE586121A6B03E400A98B34 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBE586181A6B03E400A98B34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55FA5E444CDDE548991BF9BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F06F4AE46E7BF987BE2D928 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBE586011A6B03E400A98B34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBE5862E1A6B0B1500A98B34 /* RoomViewController.swift in Sources */,
+				BBE5862C1A6B04CF00A98B34 /* RoomTableViewController.swift in Sources */,
+				BB8D831A1A6B0FE700FD4781 /* DrawView.swift in Sources */,
+				BBE5860B1A6B03E400A98B34 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBE586161A6B03E400A98B34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBE586211A6B03E500A98B34 /* PopDrawTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBE5861C1A6B03E400A98B34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBE586041A6B03E400A98B34 /* PopDraw */;
+			targetProxy = BBE5861B1A6B03E400A98B34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBE5860E1A6B03E400A98B34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBE5860F1A6B03E400A98B34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBE586131A6B03E400A98B34 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBE586141A6B03E400A98B34 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBE586221A6B03E500A98B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBE586231A6B03E500A98B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBE586251A6B03E500A98B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2D3BDD929C7917E6B21109E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PopDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopDraw/PopDraw-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBE586261A6B03E500A98B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D6359D25EECF2073930A2E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PopDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PopDraw/PopDraw-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		BBE586281A6B03E500A98B34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PopDrawTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopDraw.app/PopDraw";
+			};
+			name = Debug;
+		};
+		BBE586291A6B03E500A98B34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PopDrawTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopDraw.app/PopDraw";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBE586001A6B03E400A98B34 /* Build configuration list for PBXProject "PopDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE586221A6B03E500A98B34 /* Debug */,
+				BBE586231A6B03E500A98B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBE586241A6B03E500A98B34 /* Build configuration list for PBXNativeTarget "PopDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE586251A6B03E500A98B34 /* Debug */,
+				BBE586261A6B03E500A98B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBE586271A6B03E500A98B34 /* Build configuration list for PBXNativeTarget "PopDrawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE586281A6B03E500A98B34 /* Debug */,
+				BBE586291A6B03E500A98B34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBE585FD1A6B03E400A98B34 /* Project object */;
+}
