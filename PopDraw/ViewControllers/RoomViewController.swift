@@ -9,6 +9,26 @@
 //        each user's coordinates and draw them on the page. Use
 //        a start point to set the path's starting point and then
 //        the rest of the coordinates for drawing.
+//
+//  <room-id>
+//    / <path-id>
+//        / <path-detail-id>
+//          / x
+//          / y
+//
+// Exp:
+//
+//  <room-id>
+//    / startPoints
+//      / <start-point-id>
+//        / x
+//        / y
+//    / <paths>
+//      / <start-pointid>
+//        / x
+//        / y
+//
+//  Listen for start points. When a start point is added, go read its associated path and draw the points
 
 import UIKit
 
@@ -51,9 +71,28 @@ class RoomViewController: UIViewController {
         }
         
       }
-    
+      
     })
     
+  }
+  
+  func dictionaryFromCGPoint(point: CGPoint) -> Dictionary<String, CGFloat> {
+    return [ "x": point.x, "y": point.y ]
+  }
+  
+  func CGPointFromAnyObject(anyobj: AnyObject) -> CGPoint {
+    return CGPointMake(anyobj["x"] as CGFloat, anyobj["y"] as CGFloat)
+  }
+  
+  func stringKeyFromCGPoint(point: CGPoint) -> String {
+    return point.x.description + "-" + point.y.description
+  }
+  
+  func CGPointFromString(pointString: String) -> CGPoint {
+    var pointsArray = split(pointString) {$0 == "-"}
+    var xPoint: CGFloat = CGFloatFromString(pointsArray[0])!
+    var yPoint: CGFloat = CGFloatFromString(pointsArray[1])!
+    return CGPointMake(xPoint, yPoint)
   }
   
   func CGFloatFromString(string: String) -> CGFloat? {

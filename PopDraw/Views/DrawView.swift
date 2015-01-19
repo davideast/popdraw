@@ -40,7 +40,8 @@ class DrawView: UIView {
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
     var touch: AnyObject = touches.anyObject()!
     var p : CGPoint = touch.locationInView(self)
-    path.moveToPoint(p)
+    firstTouchHandler?(p)
+    //path.moveToPoint(p)
   }
   
   override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
