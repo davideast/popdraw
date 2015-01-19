@@ -10,6 +10,8 @@
 //        a start point to set the path's starting point and then
 //        the rest of the coordinates for drawing.
 //
+//  Possible Data Structures
+//
 //  <room-id>
 //    / <path-id>
 //        / <path-detail-id>
@@ -50,6 +52,12 @@ class RoomViewController: UIViewController {
     
     navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
     navigationItem.leftItemsSupplementBackButton = true
+    
+    drawView.firstTouchHandler = { point in
+      // BUG: this does not fire for the other user, so it creates the line
+      // from their last point, which is not desired.
+      self.drawView.moveToFirstPoint(point)
+    }
     
     drawView.moveHandler = { point in
       roomRef.childByAutoId().setValue([ "x": point.x, "y" : point.y])
