@@ -40,6 +40,18 @@ class RoomViewController: UIViewController {
   
   var handle : UInt = 0
   
+  @IBOutlet weak var buttonClear: UIBarButtonItem!
+  
+  @IBAction func clearPath(sender: AnyObject) {
+    self.clearPaths()
+  }
+  
+  func clearPaths() {
+    self.drawView.clearPath()
+    ref.childByAppendingPath(room.id).childByAppendingPath("startingPoints").setValue(nil)
+    ref.childByAppendingPath(room.id).childByAppendingPath("drawings").setValue(nil)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -77,8 +89,15 @@ class RoomViewController: UIViewController {
       }
     })
     
+    startPointsRef.observeEventType(.ChildRemoved, withBlock: { snapshot in
+      self.clearPaths()
+    })
+    
   }
   
+  // BUG: If two people draw at once it will screw up moving to the first point
+  // We need to listen to path updates in a queue like fashion
+  // Possible use the lastTouchHandler to read the new event
   func listenToDrawPath(key : NSString) {
     var count = 0
     // create a reference to the drawings/<key> draw path

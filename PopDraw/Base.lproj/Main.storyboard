@@ -7,7 +7,6 @@
         <!--Room View Controller-->
         <scene sceneID="Ywi-fR-xO6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UAO-bO-Hvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="v3s-Qp-ggK" customClass="RoomViewController" customModule="PopDraw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PhJ-MO-ECq"/>
@@ -18,18 +17,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lLZ-Bi-asJ"/>
+                    <navigationItem key="navigationItem" id="lLZ-Bi-asJ">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="9Op-9V-5iZ">
+                            <connections>
+                                <action selector="clearPath:" destination="v3s-Qp-ggK" id="aZ0-wN-v6z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonClear" destination="9Op-9V-5iZ" id="ZS0-ZT-OYT"/>
                         <outlet property="drawView" destination="zFx-XT-7Uo" id="7jl-EM-cMl"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAO-bO-Hvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1124" y="709"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="z6W-Of-ibO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhr-NT-iZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Td6-kx-KYr" customClass="RoomTableViewController" customModule="PopDraw" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3WD-vd-DNo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -61,13 +67,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Rzz-P4-KGC"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhr-NT-iZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="47"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rhB-yN-Y2e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="925-sI-xA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="2R7-JB-t6h" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C4t-Bp-v5Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -77,26 +83,26 @@
                         <segue destination="Td6-kx-KYr" kind="relationship" relationship="rootViewController" id="9Et-Mn-vao"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="925-sI-xA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="312" y="47"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="q4B-aL-IfZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cNO-kf-YwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <splitViewController id="O7K-zy-oUP" sceneMemberID="viewController">
                     <connections>
                         <segue destination="2R7-JB-t6h" kind="relationship" relationship="masterViewController" id="sn7-K4-z4H"/>
                         <segue destination="v3S-pM-nwa" kind="relationship" relationship="detailViewController" id="1Il-JW-39O"/>
                     </connections>
                 </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNO-kf-YwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-508" y="378"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yJ8-gr-9iI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w3Y-al-Bj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v3S-pM-nwa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TXB-hN-DME">
@@ -108,6 +114,7 @@
                         <segue destination="v3s-Qp-ggK" kind="relationship" relationship="rootViewController" id="jAA-R9-XJW"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3Y-al-Bj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="312" y="709"/>
         </scene>

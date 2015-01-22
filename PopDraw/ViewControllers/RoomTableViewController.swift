@@ -21,7 +21,12 @@ class RoomTableViewController: UITableViewController, UISplitViewControllerDeleg
   
   private let rooms = [
     Room(id: "1", name: "First!!1"),
-    Room(id: "2", name: "Catz")
+    Room(id: "2", name: "Cats"),
+    Room(id: "3", name: "Dogs"),
+    Room(id: "4", name: "Puns"),
+    Room(id: "5", name: "Nuns"),
+    Room(id: "6", name: "Circles"),
+    Room(id: "7", name: "Squares")
   ]
   
   override func viewDidLoad() {

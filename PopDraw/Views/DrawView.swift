@@ -34,6 +34,11 @@ class DrawView: UIView {
     self.setNeedsDisplay()
   }
   
+  func clearPath() {
+    path = UIBezierPath()
+    self.setNeedsDisplay()
+  }
+  
   override func drawRect(rect: CGRect) {
     UIColor.blackColor().setStroke()
     path.stroke()
