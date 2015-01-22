@@ -12,25 +12,21 @@
 //
 //  Possible Data Structures
 //
-//  <room-id>
-//    / <path-id>
-//        / <path-detail-id>
-//          / x
-//          / y
+//  When touches begin write to a drawing path
+//  When touches end write to a drawingAdded path
+//  When a child is added to drawingAdded it needs to read from it's associated drawing path
 //
-// Exp:
+//  / room
+//    / startingPoints
+//      / <key>
+//        / key - <key>
 //
-//  <room-id>
-//    / startPoints
-//      / <start-point-id>
-//        / x
-//        / y
-//    / <paths>
-//      / <start-pointid>
-//        / x
-//        / y
+//    / drawings
+//      / <key>
+//          / <draw-key>
+//            / x
+//            / y
 //
-//  Listen for start points. When a start point is added, go read its associated path and draw the points
 
 import UIKit
 
@@ -42,10 +38,16 @@ class RoomViewController: UIViewController {
   
   var ref = Firebase(url: "https://popdraw.firebaseio.com/")
   
+  var handle : UInt = 0
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     var roomRef = ref.childByAppendingPath(room.id)
+    var startPointsRef = roomRef.childByAppendingPath("startingPoints")
+    var drawingsRef = roomRef.childByAppendingPath("drawings")
+    var currentPointRef = startPointsRef.childByAutoId()
+    var currentDrawRef = drawingsRef.childByAutoId()
     var count = 0
     
     title = room.name
@@ -54,17 +56,36 @@ class RoomViewController: UIViewController {
     navigationItem.leftItemsSupplementBackButton = true
     
     drawView.firstTouchHandler = { point in
-      // BUG: this does not fire for the other user, so it creates the line
-      // from their last point, which is not desired.
-      self.drawView.moveToFirstPoint(point)
+      // Create a new currentPointRef
+      currentPointRef = startPointsRef.childByAutoId()
+      // Use the key from currentPointRef to create a new drawingRef
+      currentDrawRef = drawingsRef.childByAppendingPath(currentPointRef.key)
+      // Set the value of the currentPointRef to the key to trigger a child_added event
+      currentPointRef.setValue([ "key": currentPointRef.key ])
+      //self.drawView.moveToFirstPoint(point)
     }
     
     drawView.moveHandler = { point in
-      roomRef.childByAutoId().setValue([ "x": point.x, "y" : point.y])
+      // Write the the current drawing ref
+      currentDrawRef.childByAutoId().setValue(self.dictionaryFromCGPoint(point))
     }
     
-    roomRef.observeEventType(.ChildAdded, withBlock: { snapshot in
-      
+    startPointsRef.observeEventType(.ChildAdded, withBlock: { snapshot in
+      let enumerator = snapshot.children
+      while let startingSnap = enumerator.nextObject() as? FDataSnapshot {
+        self.listenToDrawPath(startingSnap.value as NSString)
+      }
+    })
+    
+  }
+  
+  func listenToDrawPath(key : NSString) {
+    var count = 0
+    // create a reference to the drawings/<key> draw path
+    // when each point is drawn for the path, draw it on the page
+    // the first point is always the first point to move to
+    var drawingsRef = ref.childByAppendingPath(room.id).childByAppendingPath("drawings").childByAppendingPath(key)
+    self.handle = drawingsRef.observeEventType(.ChildAdded, withBlock: { snapshot in
       if let xPoint = snapshot.value["x"] as? CGFloat {
         
         if let yPoint = snapshot.value["y"] as? CGFloat {
@@ -76,12 +97,11 @@ class RoomViewController: UIViewController {
           } else {
             self.drawView.addPoint(point)
           }
+          
         }
         
       }
-      
     })
-    
   }
   
   func dictionaryFromCGPoint(point: CGPoint) -> Dictionary<String, CGFloat> {

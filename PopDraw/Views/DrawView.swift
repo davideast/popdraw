@@ -13,6 +13,8 @@ class DrawView: UIView {
   var path : UIBezierPath
   var moveHandler: ((CGPoint) -> ())?
   var firstTouchHandler: ((CGPoint) -> ())?
+  var lastTouchHandler: ((CGPoint) -> ())?
+  
   //var drawHandler: ((Dictionary<String, Double>) -> ())?
   
   required init(coder aDecoder: NSCoder) {
@@ -51,7 +53,9 @@ class DrawView: UIView {
   }
   
   override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-    self.touchesMoved(touches, withEvent: event)
+    var touch: AnyObject = touches.anyObject()!
+    var p : CGPoint = touch.locationInView(self)
+    lastTouchHandler?(p)
   }
   
   override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
